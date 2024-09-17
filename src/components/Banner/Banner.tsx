@@ -165,7 +165,7 @@ const Banner = ({ isDark }: any) => {
           >
             software engineer{" "}
           </span>
-          with a passion for global exploration based in{" "}
+          based in{" "}
           <span
             className={cn(
               "font-bold",
@@ -174,9 +174,9 @@ const Banner = ({ isDark }: any) => {
                 : "text-[hsla(36,97%,70%,1)]"
             )}
           >
-            Finland.
+            Finland
           </span>{" "}
-          Proficient in{" "}
+          with a passion for global exploration. Proficient in{" "}
           <span
             className={cn(
               "font-bold",
