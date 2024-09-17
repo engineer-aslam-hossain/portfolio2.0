@@ -145,7 +145,7 @@ const Banner = ({ isDark }: any) => {
 
         <h3
           className={cn(
-            "xl:text-4xl md:text-3xl sm:text-2xl mt-6 font-Acorn z-10 text-justify",
+            "xl:text-4xl md:text-3xl sm:text-2xl mt-6 font-Quicksand z-10 text-justify font-medium",
             isDark ? "text-[hsla(172,95%,18%,1)]" : "text-[hsla(160,52%,71%,1)]"
           )}
         >

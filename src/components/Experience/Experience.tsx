@@ -42,7 +42,7 @@ const Experience = ({ isDark }: any) => {
           className="grayscale transition-[filter] duration-[0.3s] ease-[ease] hover:grayscale-[0%] "
         />
       </div>
-      <div className="">
+      <div className="font-Quicksand font-medium">
         <div
           className={cn(
             "p-6 mb-6 grid grid-cols-[1fr_4fr] hover:cursor-pointer hover:transition-all hover:duration-[0.15s] hover:ease-[ease-in-out] rounded-[.375rem] group max-sm:gap-4 max-sm:grid-cols-1",

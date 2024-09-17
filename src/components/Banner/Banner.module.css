@@ -27,7 +27,7 @@
   overflow: hidden;
   transform: scale(1);
   z-index: 0;
-  top: -80%;
+  top: -80% !important;
 }
 .blob {
   position: absolute;
@@ -39,8 +39,7 @@
   background: conic-gradient(
     from 0deg,
     hsla(22, 62%, 76%, 1),
-    #9fa6ff,
-    #56c288
+    /* #9fa6ff, */ #56c288
   );
 
   animation: spinBlob 8s linear infinite;

@@ -71,7 +71,9 @@ const Footer = ({ isDark }: any) => {
       <p
         className={cn(
           "text-center",
-          isDark ? "text-[hsla(172,95%,18%,1)]" : "text-[hsla(160,52%,71%,1)]"
+          isDark
+            ? "text-[hsla(172,95%,18%,1)]"
+            : "text-[hsla(160,52%,71%,1)] font-Quicksand"
         )}
       >
         © {new Date().getFullYear()} All Rights Reserve to Aslam Hossain
