@@ -72,7 +72,7 @@ const Experience = ({ isDark }: any) => {
                     : "text-[hsla(160,52%,71%,1)] group-hover:text-[hsla(36,97%,70%,1)]"
                 )}
               >
-                Studying Master's in IT(CE), Åbo Akademi University
+                Studying Master&apos;s in IT(CE), Åbo Akademi University
               </h2>
               <BsArrowUpRight
                 className={cn(
