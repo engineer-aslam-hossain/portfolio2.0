@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Acorn";
+  src: url("/fonts/acorn2.woff2") format("woff2"),
+    url("/fonts/acorn1.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -18,16 +30,17 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: hsla(36, 31%, 90%, 1);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .name-hover {
+    @apply bg-[linear-gradient(270deg,#e3a5ee,#ede6bc)] bg-clip-text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
 }

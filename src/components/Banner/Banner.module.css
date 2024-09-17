@@ -1,0 +1,51 @@
+@keyframes spinBlob {
+  0% {
+    transform: rotate(0deg) scale(2);
+  }
+
+  100% {
+    transform: rotate(1turn) scale(2);
+  }
+}
+
+.blob_outer_container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  inset: 0;
+  margin: 0;
+  filter: blur(100px);
+}
+.blob_inner_container {
+  border-radius: 99999px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: scale(1);
+  z-index: 0;
+  top: -80%;
+}
+.blob {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  margin: auto;
+  z-index: -1;
+  background: conic-gradient(
+    from 0deg,
+    hsla(22, 62%, 76%, 1),
+    #9fa6ff,
+    #56c288
+  );
+
+  animation: spinBlob 8s linear infinite;
+  opacity: 0.4;
+}
+
+@media (max-width: 1024px) {
+}
