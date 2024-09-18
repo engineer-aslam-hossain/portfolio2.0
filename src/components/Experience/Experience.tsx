@@ -13,6 +13,63 @@ if (typeof window !== "undefined") {
 
 const Experience = ({ isDark }: any) => {
   const ref = useRef<HTMLDivElement>(null);
+
+  const experienceList = [
+    {
+      year: "2024 - Current",
+      url: "https://www.abo.fi/",
+      position: "Studying Master's in IT(CE), Åbo Akademi University",
+      responsibilities: [
+        "Currently honing my skills in project management and mastering cloud tech.",
+        "Learning the art of securing software systems, protecting against vulnerabilities.",
+        "Building a strong foundation in software quality assurance and testing.",
+        "Tech addict, always on the hunt, constantly leveling up my skills.",
+      ],
+      tools: ["Cloud Computing", "Project Management", "Parallel Programming"],
+    },
+    {
+      year: "2021 - 2024",
+      url: "https://selisegroup.com/",
+      position: "Software Engineer, SELISE",
+      responsibilities: [
+        "Led diverse teams, built cutting-edge apps with Next.js and Flutter.",
+        "Fostered teamwork, navigated complex projects to success.",
+        "Conquered challenges with creative solutions, adapted to change.",
+        "Thrived in a demanding role, took initiative, delivered results.",
+      ],
+      tools: [
+        "Next.js",
+        "Express.js",
+        "Flutter",
+        "Storyblok",
+        "MongoDB",
+        "Redis",
+        "SSO",
+        "Material UI",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      year: "2020 - 2021",
+      url: "https://crantechllc.com/",
+      position: "Software Engineer, Crantech LLC",
+      responsibilities: [
+        "Crafted apps with React and Next.js, seamlessly integrated backends.",
+        "Teamed up to deliver pixel-perfect UIs.",
+        "Engineered a cross-platform audio meeting app.",
+        "Wielded a diverse toolkit, conquered coding challenges with finesse.",
+      ],
+      tools: [
+        "Javascript",
+        "React",
+        "React Native",
+        "Redux",
+        "SCSS",
+        "Node.js",
+      ],
+    },
+  ];
+
   //
   useGSAP(
     () => {
@@ -43,399 +100,80 @@ const Experience = ({ isDark }: any) => {
         />
       </div>
       <div className="font-Quicksand font-medium">
-        <div
-          className={cn(
-            "p-6 mb-6 grid grid-cols-[1fr_4fr] hover:cursor-pointer hover:transition-all hover:duration-[0.15s] hover:ease-[ease-in-out] rounded-[.375rem] group max-sm:gap-4 max-sm:grid-cols-1",
-            isDark
-              ? "hover:bg-[hsla(172,95%,18%,.1)] shadow-[inset 0 1px 0 0 rgba(148,163,184,.1)]"
-              : "hover:bg-[hsla(160,52%,71%,.1)] shadow-[inset 0 1px 0 0 rgba(148,163,184,.1)]"
-          )}
-          onClick={() => window.open("https://www.abo.fi/")}
-        >
+        {experienceList.map((experience) => (
           <div
+            key={experience.year}
             className={cn(
-              "mt-1",
+              "p-6 mb-6 grid grid-cols-[1fr_4fr] hover:cursor-pointer hover:transition-all hover:duration-[0.15s] hover:ease-[ease-in-out] rounded-[.375rem] group max-sm:gap-4 max-sm:grid-cols-1",
               isDark
-                ? "text-[hsla(172,95%,18%,.8)]"
-                : "text-[hsla(160,52%,71%,.6)]"
+                ? "hover:bg-[hsla(172,95%,18%,.1)] shadow-[inset 0 1px 0 0 rgba(148,163,184,.1)]"
+                : "hover:bg-[hsla(160,52%,71%,.1)] shadow-[inset 0 1px 0 0 rgba(148,163,184,.1)]"
             )}
+            onClick={() => window.open(experience.url)}
           >
-            2024 - Current
-          </div>
-          <div>
-            <div className="flex justify-between items-center">
-              <h2
-                className={cn(
-                  "text-lg mb-2 font-bold max-sm:text-sm",
-                  isDark
-                    ? "text-[hsla(172,95%,18%,1)] group-hover:text-[hsla(0,43%,44.7%,1)]"
-                    : "text-[hsla(160,52%,71%,1)] group-hover:text-[hsla(36,97%,70%,1)]"
-                )}
-              >
-                Studying Master&apos;s in IT(CE), Åbo Akademi University
-              </h2>
-              <BsArrowUpRight
-                className={cn(
-                  "group-hover:translate-x-1 group-hover:translate-y-[-1px] transition-transform duration-150 ease-in-out",
-                  isDark
-                    ? "text-[hsla(172,95%,18%,1)] group-hover:text-[hsla(0,43%,44.7%,1)]"
-                    : "text-[hsla(160,52%,71%,1)] group-hover:text-[hsla(36,97%,70%,1)]"
-                )}
-              />
-            </div>
-            <ul
+            <div
               className={cn(
-                "list-disc space-y-2  mb-4",
+                "mt-1",
                 isDark
-                  ? "text-[hsla(172,95%,18%,.6)]"
+                  ? "text-[hsla(172,95%,18%,.8)]"
                   : "text-[hsla(160,52%,71%,.6)]"
               )}
             >
-              <li className="text-sm">
-                Currently honing my skills in project management and mastering
-                cloud tech.
-              </li>
-              <li className="text-sm">
-                Learning the art of securing software systems, protecting
-                against vulnerabilities.
-              </li>
-              <li className="text-sm">
-                Building a strong foundation in software quality assurance and
-                testing.
-              </li>
-              <li className="text-sm">
-                Tech addict, always on the hunt, constantly leveling up my
-                skills.
-              </li>
-            </ul>
-            <div className="flex flex-wrap items-center">
-              <span
+              {experience.year}
+            </div>
+            <div>
+              <div className="flex justify-between items-center">
+                <h2
+                  className={cn(
+                    "text-lg mb-2 font-bold max-sm:text-sm",
+                    isDark
+                      ? "text-[hsla(172,95%,18%,1)] group-hover:text-[hsla(0,43%,44.7%,1)]"
+                      : "text-[hsla(160,52%,71%,1)] group-hover:text-[hsla(36,97%,70%,1)]"
+                  )}
+                >
+                  {experience.position}
+                </h2>
+                <BsArrowUpRight
+                  className={cn(
+                    "group-hover:translate-x-1 group-hover:translate-y-[-1px] transition-transform duration-150 ease-in-out",
+                    isDark
+                      ? "text-[hsla(172,95%,18%,1)] group-hover:text-[hsla(0,43%,44.7%,1)]"
+                      : "text-[hsla(160,52%,71%,1)] group-hover:text-[hsla(36,97%,70%,1)]"
+                  )}
+                />
+              </div>
+              <ul
                 className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
+                  "list-disc space-y-2  mb-4",
                   isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
+                    ? "text-[hsla(172,95%,18%,.6)]"
+                    : "text-[hsla(160,52%,71%,.6)]"
                 )}
               >
-                Cloud Computing
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Project Management
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full ml-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Parallel Programming
-              </span>
+                {experience?.responsibilities?.map((responsibility) => (
+                  <li className="text-sm" key={responsibility}>
+                    {responsibility}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap items-center">
+                {experience?.tools?.map((tool) => (
+                  <span
+                    key={tool}
+                    className={cn(
+                      "px-4 py-2 rounded-full m-1.5 text-sm",
+                      isDark
+                        ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
+                        : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
+                    )}
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className={cn(
-            "p-6 mb-6 grid grid-cols-[1fr_4fr] hover:cursor-pointer hover:transition-all hover:duration-[0.15s] hover:ease-[ease-in-out] rounded-[.375rem] group max-sm:grid-cols-1",
-            isDark
-              ? "hover:bg-[hsla(172,95%,18%,.1)] shadow-[inset 0 1px 0 0 rgba(148,163,184,.1)]"
-              : "hover:bg-[hsla(160,52%,71%,.1)] shadow-[inset 0 1px 0 0 rgba(148,163,184,.1)]"
-          )}
-          onClick={() => window.open("https://selisegroup.com/")}
-        >
-          <div
-            className={cn(
-              "mt-1",
-              isDark
-                ? "text-[hsla(172,95%,18%,.6)]"
-                : "text-[hsla(160,52%,71%,.6)]"
-            )}
-          >
-            2021 - 2024
-          </div>
-          <div>
-            <div className="flex justify-between items-center">
-              <h2
-                className={cn(
-                  "text-lg mb-2 font-bold",
-                  isDark
-                    ? "text-[hsla(172,95%,18%,1)] group-hover:text-[hsla(0,43%,44.7%,1)]"
-                    : "text-[hsla(160,52%,71%,1)] group-hover:text-[hsla(36,97%,70%,1)]"
-                )}
-              >
-                Software Engineer, SELISE
-              </h2>
-              <BsArrowUpRight
-                className={cn(
-                  "group-hover:translate-x-1 group-hover:translate-y-[-1px] transition-transform duration-150 ease-in-out",
-                  isDark
-                    ? "text-[hsla(172,95%,18%,1)] group-hover:text-[hsla(0,43%,44.7%,1)]"
-                    : "text-[hsla(160,52%,71%,1)] group-hover:text-[hsla(36,97%,70%,1)]"
-                )}
-              />
-            </div>
-            <ul
-              className={cn(
-                "list-disc space-y-2  mb-4",
-                isDark
-                  ? "text-[hsla(172,95%,18%,.6)]"
-                  : "text-[hsla(160,52%,71%,.6)]"
-              )}
-            >
-              <li className="text-sm">
-                Led diverse teams, built cutting-edge apps with Next.js and
-                Flutter.
-              </li>
-              <li className="text-sm">
-                Fostered teamwork, navigated complex projects to success.
-              </li>
-              <li className="text-sm">
-                Conquered challenges with creative solutions, adapted to change.
-              </li>
-              <li className="text-sm">
-                Thrived in a demanding role, took initiative, delivered results.
-              </li>
-            </ul>
-            <div className="flex flex-wrap">
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Next.js
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Express.js
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Flutter
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Storyblok
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                MongoDB
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Nest.js
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Redis
-              </span>{" "}
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                SSO
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Material UI
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Tailwind CSS
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          className={cn(
-            "p-6 mb-6 grid grid-cols-[1fr_4fr] hover:cursor-pointer hover:transition-all hover:duration-[0.15s] hover:ease-[ease-in-out] rounded-[.375rem] group max-sm:grid-cols-1",
-            isDark
-              ? "hover:bg-[hsla(172,95%,18%,.1)] shadow-[inset 0 1px 0 0 rgba(148,163,184,.1)]"
-              : "hover:bg-[hsla(160,52%,71%,.1)] shadow-[inset 0 1px 0 0 rgba(148,163,184,.1)]"
-          )}
-          onClick={() => window.open("https://crantechllc.com/")}
-        >
-          <div
-            className={cn(
-              "mt-1",
-              isDark
-                ? "text-[hsla(172,95%,18%,.6)]"
-                : "text-[hsla(160,52%,71%,.6)]"
-            )}
-          >
-            2020 - 2021
-          </div>
-          <div>
-            <div className="flex justify-between items-center">
-              <h2
-                className={cn(
-                  "text-lg mb-2 font-bold",
-                  isDark
-                    ? "text-[hsla(172,95%,18%,1)] group-hover:text-[hsla(0,43%,44.7%,1)]"
-                    : "text-[hsla(160,52%,71%,1)] group-hover:text-[hsla(36,97%,70%,1)]"
-                )}
-              >
-                Software Engineer, CranTech
-              </h2>
-              <BsArrowUpRight
-                className={cn(
-                  "group-hover:translate-x-1 group-hover:translate-y-[-1px] transition-transform duration-150 ease-in-out",
-                  isDark
-                    ? "text-[hsla(172,95%,18%,1)] group-hover:text-[hsla(0,43%,44.7%,1)]"
-                    : "text-[hsla(160,52%,71%,1)] group-hover:text-[hsla(36,97%,70%,1)]"
-                )}
-              />
-            </div>
-
-            <ul
-              className={cn(
-                "list-disc space-y-2  mb-4",
-                isDark
-                  ? "text-[hsla(172,95%,18%,.6)]"
-                  : "text-[hsla(160,52%,71%,.6)]"
-              )}
-            >
-              <li className="text-sm">
-                Crafted apps with React and Next.js, seamlessly integrated
-                backends.
-              </li>
-              <li className="text-sm">
-                Teamed up to deliver pixel-perfect UIs.
-              </li>
-              <li className="text-sm">
-                Engineered a cross-platform audio meeting app.
-              </li>
-              <li className="text-sm">
-                Wielded a diverse toolkit, conquered coding challenges with
-                finesse.
-              </li>
-            </ul>
-            <div className="flex flex-wrap">
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Javascript
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                React
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                React Native
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Redux
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                SCSS
-              </span>
-              <span
-                className={cn(
-                  "px-4 py-2 rounded-full m-2 text-sm",
-                  isDark
-                    ? "bg-[hsla(172,95%,18%,.1)] text-[hsla(172,95%,18%,.6)]"
-                    : "bg-[rgba(45,212,191,.1)] text-[hsla(160,52%,71%,1)]"
-                )}
-              >
-                Node.js
-              </span>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
