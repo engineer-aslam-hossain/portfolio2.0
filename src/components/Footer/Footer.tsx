@@ -3,12 +3,13 @@ import {
   FaFacebookF,
   FaGithub,
   FaLinkedinIn,
+  FaUpRightFromSquare,
   FaXTwitter,
 } from "react-icons/fa6";
 
 const Footer = ({ isDark }: any) => {
   return (
-    <div className="container w-11/12 mx-auto flex flex-col items-center">
+    <div className="container w-11/12 mx-auto flex flex-col items-center relative">
       <a
         href="mailto:aslamhossain.dev@gmail.com"
         className={cn(
@@ -20,7 +21,7 @@ const Footer = ({ isDark }: any) => {
       >
         aslamhossain.dev@gmail.com
       </a>
-      <div className="grid grid-cols-4 gap-4 mb-10">
+      <div className="grid grid-cols-4 gap-2 place-items-center mb-10 items-center justify-center">
         <FaLinkedinIn
           size={30}
           onClick={() =>
@@ -67,6 +68,18 @@ const Footer = ({ isDark }: any) => {
               : "hover:text-[hsla(160,52%,71%,1)] text-[hsla(36,97%,70%,1)]"
           )}
         />
+      </div>
+      <div
+        className={cn(
+          "bottom-0 right-0 rounded-full max-sm:bottom-[-2rem] grid grid-cols-2 place-items-center gap-2 mb-10  transition-[500ms]",
+          "bg-[#498063] px-5 py-3 hover:cursor-pointer hover:bg-[#56c288]"
+        )}
+        onClick={() => window.open("https://aslamhossain.netlify.app/")}
+      >
+        <span>V1</span>
+        <div className="place-items-center flex">
+          <FaUpRightFromSquare />
+        </div>
       </div>
       <p
         className={cn(

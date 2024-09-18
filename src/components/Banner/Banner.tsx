@@ -118,7 +118,7 @@ const Banner = ({ isDark }: any) => {
         <h1>
           <span
             className={cn(
-              "font-bold xl:text-6xl md:text-5xl max-sm:text-3xl sm:text-4xl font-Lobster",
+              "font-bold xl:text-6xl md:text-5xl max-sm:text-3xl sm:text-4xl font-Acorn",
               isDark
                 ? "text-[hsla(172,95%,18%,1)]"
                 : "text-[hsla(160,52%,71%,1)]"
@@ -133,7 +133,7 @@ const Banner = ({ isDark }: any) => {
               window.open("https://www.linkedin.com/in/aslamhossain-dev/")
             }
             className={cn(
-              "font-bold xl:text-6xl md:text-5xl max-sm:text-3xl sm:text-4xl leading-[1.2] transition-[150ms] duration-[ease] hover:cursor-pointer transform: translate3d(0px, 0px, -30px) rotateX(90deg) hover:bg-[linear-gradient(270deg,_#e3a5ee,_#ede6bc)]%20hover:bg-clip-text font-Lobster",
+              "font-bold xl:text-6xl md:text-5xl max-sm:text-3xl sm:text-4xl leading-[1.2] transition-[150ms] duration-[ease] hover:cursor-pointer transform: translate3d(0px, 0px, -30px) rotateX(90deg) hover:bg-[linear-gradient(270deg,_#e3a5ee,_#ede6bc)]%20hover:bg-clip-text font-Acorn",
               isDark
                 ? "text-[hsla(0,43%,44.7%,1)] hover:text-[hsla(172,95%,18%,1)]"
                 : "text-[hsla(36,97%,70%,1)] hover:text-[hsla(160,52%,71%,1)]"

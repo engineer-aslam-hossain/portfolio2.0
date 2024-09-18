@@ -99,12 +99,12 @@ const Projects = ({ isDark }: any) => {
 
   return (
     <div
-      className="py-10 relative z-10 container w-auto mx-20 my-40 max-lg:mt-10 max-sm:mb-0 max-sm:mx-5"
+      className="py-10 relative z-10 container w-auto mx-20 my-20 max-lg:mt-10 max-sm:mb-0 max-sm:mx-5 max-sm:py-0"
       ref={ref}
     >
       <h3
         className={cn(
-          "text-3xl mb-6",
+          "text-3xl mb-6 max-sm:text-2xl",
           isDark ? "text-[hsla(172,95%,18%,1)]" : "text-[hsla(160,52%,71%,1)]"
         )}
       >

@@ -1,5 +1,6 @@
 "use client";
 
+import Achievements from "@/components/Achievements/Achievements";
 import Banner from "@/components/Banner/Banner";
 import Experience from "@/components/Experience/Experience";
 import Footer from "@/components/Footer/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
         <Banner isDark={isDark} />
         <Experience isDark={isDark} />
         <Projects isDark={isDark} />
+        <Achievements isDark={isDark} />
         <Footer isDark={isDark} />
       </div>
     </main>

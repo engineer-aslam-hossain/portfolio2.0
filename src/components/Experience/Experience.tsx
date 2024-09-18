@@ -96,7 +96,7 @@ const Experience = ({ isDark }: any) => {
           width={100}
           height={100}
           layout="responsive"
-          className="grayscale transition-[filter] duration-[0.3s] ease-[ease] hover:grayscale-[0%] "
+          className="grayscale transition-[filter] duration-[0.3s] ease-[ease] hover:grayscale-[0%]"
         />
       </div>
       <div className="font-Quicksand font-medium">
