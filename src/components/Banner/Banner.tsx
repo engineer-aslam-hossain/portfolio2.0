@@ -63,16 +63,6 @@ const Banner = ({ isDark }: any) => {
     },
   };
 
-  function professionEnter() {
-    setCursorText("Github");
-    setCursorVariant("profession");
-  }
-
-  function professionLeave() {
-    setCursorText("");
-    setCursorVariant("default");
-  }
-
   function nameEnter() {
     setCursorText("👋");
     setCursorVariant("name");
@@ -86,7 +76,7 @@ const Banner = ({ isDark }: any) => {
   return (
     <>
       <div
-        className="py-10 relative z-10 container w-auto xl:mx-40 md:mx-20 my-20 max-sm:my-10"
+        className="py-10 relative z-10 container w-auto xl:mx-48 md:mx-20 md:my-20 xl:my-36 max-sm:mb-0 max-sm:mt-10 max-sm:mx-5"
         ref={ref}
       >
         <motion.div
@@ -145,51 +135,65 @@ const Banner = ({ isDark }: any) => {
 
         <h3
           className={cn(
-            "xl:text-4xl md:text-3xl sm:text-2xl mt-6 font-Quicksand z-10 text-justify font-medium",
+            "xl:text-3xl md:text-3xl sm:text-2xl mt-6 font-Quicksand z-10 text-justify font-medium xl:leading-10",
             isDark ? "text-[hsla(172,95%,18%,1)]" : "text-[hsla(160,52%,71%,1)]"
           )}
         >
-          A seasoned{" "}
+          With{" "}
           <span
             className={cn(
-              "hover:text-[hsla(160,52%,71%,1)] hover:cursor-pointer font-bold",
+              "font-bold",
               isDark
-                ? "text-[hsla(0,43%,44.7%,1)] hover:text-[hsla(172,95%,18%,1)]"
-                : "text-[hsla(36,97%,70%,1)] hover:text-[hsla(160,52%,71%,1)]"
+                ? "text-[hsla(0,43%,44.7%,1)]"
+                : "text-[hsla(36,97%,70%,1)]"
             )}
-            onMouseEnter={professionEnter}
-            onMouseLeave={professionLeave}
-            onClick={() =>
-              window.open("https://github.com/engineer-aslam-hossain")
-            }
           >
-            software engineer{" "}
+            4+ years
+          </span>{" "}
+          of experience in front-end wizardry{" "}
+          <span
+            className={cn(
+              "font-bold",
+              isDark
+                ? "text-[hsla(0,43%,44.7%,1)]"
+                : "text-[hsla(36,97%,70%,1)]"
+            )}
+          >
+            (React, Next.js)
+          </span>{" "}
+          to backend mastery{" "}
+          <span
+            className={cn(
+              "font-bold",
+              isDark
+                ? "text-[hsla(0,43%,44.7%,1)]"
+                : "text-[hsla(36,97%,70%,1)]"
+            )}
+          >
+            (Express.js, Nest.js, MongoDB),
+          </span>{" "}
+          and mobile app magic with{" "}
+          <span
+            className={cn(
+              "font-bold",
+              isDark
+                ? "text-[hsla(0,43%,44.7%,1)]"
+                : "text-[hsla(36,97%,70%,1)]"
+            )}
+          >
+            Flutter,
+          </span>{" "}
+          I craft innovative solutions that shine brighter than the{" "}
+          <span
+            className={cn(
+              "font-bold",
+              isDark
+                ? "text-[hsla(0,43%,44.7%,1)]"
+                : "text-[hsla(36,97%,70%,1)]"
+            )}
+          >
+            Finnish sun.
           </span>
-          based in{" "}
-          <span
-            className={cn(
-              "font-bold",
-              isDark
-                ? "text-[hsla(0,43%,44.7%,1)]"
-                : "text-[hsla(36,97%,70%,1)]"
-            )}
-          >
-            Finland
-          </span>{" "}
-          with a passion for global exploration. Proficient in{" "}
-          <span
-            className={cn(
-              "font-bold",
-              isDark
-                ? "text-[hsla(0,43%,44.7%,1)]"
-                : "text-[hsla(36,97%,70%,1)]"
-            )}
-          >
-            JavaScript and Flutter,
-          </span>{" "}
-          I excel at crafting high-performance web and mobile applications. My
-          love for the dynamic tech landscape drives me to deliver innovative
-          solutions.
         </h3>
       </div>
       <div className={classes.blob_outer_container}>
