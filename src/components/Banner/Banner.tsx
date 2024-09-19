@@ -181,19 +181,10 @@ const Banner = ({ isDark }: any) => {
                 : "text-[hsla(36,97%,70%,1)]"
             )}
           >
-            Flutter,
+            Flutter.
           </span>{" "}
-          I craft innovative solutions that shine brighter than the{" "}
-          <span
-            className={cn(
-              "font-bold",
-              isDark
-                ? "text-[hsla(0,43%,44.7%,1)]"
-                : "text-[hsla(36,97%,70%,1)]"
-            )}
-          >
-            Finnish sun.
-          </span>
+          My love for the dynamic tech landscape drives me to deliver innovative
+          solutions.
         </h3>
       </div>
       <div className={classes.blob_outer_container}>
