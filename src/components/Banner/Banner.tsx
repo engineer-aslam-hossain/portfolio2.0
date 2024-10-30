@@ -148,7 +148,7 @@ const Banner = ({ isDark }: any) => {
                 : "text-[hsla(36,97%,70%,1)]"
             )}
           >
-            4+ years
+            5+ years
           </span>{" "}
           of experience in front-end wizardry{" "}
           <span
